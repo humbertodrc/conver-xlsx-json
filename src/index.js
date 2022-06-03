@@ -9,13 +9,14 @@ const ExcelToJson = () => {
 
 	const jDatos = [];
 
-	for (let i = 0; i < jDatos.length; i++) {
+	for (let i = 0; i < datos.length; i++) {
 		const dato = datos[i];
 		jDatos.push({
 			...dato,
-			Fecha: new Date(dato.Fecha - (25567 + 2) * 86400 * 1000),
+			fecha: new Date((dato.fecha - (25567 + 2)) * 86400 * 1000),
 		});
 	}
+	console.log(jDatos);
 };
 
 ExcelToJson();
